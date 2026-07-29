@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Coach Nutricional® | Certificação Internacional em Saúde</title>
+<meta name="description" content="Coach Nutricional® é a Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos. Entre na lista de espera.">
+<link rel="canonical" href="https://www.coachnutricional.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coach Nutricional">
+<meta property="og:title" content="Coach Nutricional® | Certificação Internacional em Saúde">
+<meta property="og:description" content="Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos.">
+<meta property="og:url" content="https://www.coachnutricional.com.br/">
+<meta property="og:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Coach Nutricional",
+  "alternateName": "COACH NUTRICIONAL®",
+  "url": "https://www.coachnutricional.com.br",
+  "logo": "https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png",
+  "description": "Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos."
+}
+</script>
+
+<style>
+  :root{
+    --verde:#173D45;
+    --verde-dark:#0E2B31;
+    --ouro:#C6A664;
+    --ouro-soft:rgba(198,166,100,.45);
+    --marfim:#F5F3EE;
+    --ease:cubic-bezier(.4,0,.2,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+
+  html{-webkit-text-size-adjust:100%;}
+
+  body{
+    margin:0;
+    min-height:100vh;
+    background:var(--verde);
+    color:var(--marfim);
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .page{
+    flex:1;
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
+    padding:48px 24px 32px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  /* ---------- Selo ---------- */
+  .selo{
+    width:100%;
+    max-width:260px;
+    height:auto;
+    display:block;
+    border-radius:50%;
+    animation:fade .7s var(--ease) both;
+  }
+
+  /* ---------- Chamada ---------- */
+  .chamada{
+    margin:32px 0 0;
+    text-align:center;
+    animation:fade .7s var(--ease) .1s both;
+  }
+  .chamada h1{
+    margin:0;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--marfim);
+  }
+  .chamada p{
+    margin:10px 0 0;
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--ouro);
+  }
+
+  /* ---------- Formulário RD Station ---------- */
+  .form-wrap{
+    width:100%;
+    margin-top:36px;
+    animation:fade .7s var(--ease) .2s both;
+  }
+
+  .form-wrap input[type="text"],
+  .form-wrap input[type="email"],
+  .form-wrap input[type="tel"],
+  .form-wrap input[type="number"],
+  .form-wrap select,
+  .form-wrap textarea{
+    width:100% !important;
+    height:46px;
+    padding:0 14px;
+    margin-bottom:12px;
+    background:transparent !important;
+    border:1px solid var(--ouro-soft) !important;
+    border-radius:4px !important;
+    color:var(--marfim) !important;
+    font-family:'Poppins',sans-serif !important;
+    font-size:13px !important;
+    font-weight:300 !important;
+    letter-spacing:.02em;
+    box-shadow:none !important;
+    transition:border-color .25s var(--ease),background .25s var(--ease);
+  }
+
+  .form-wrap textarea{height:auto;padding:12px 14px;}
+
+  .form-wrap input::placeholder,
+  .form-wrap textarea::placeholder{
+    color:var(--ouro) !important;
+    opacity:.75;
+  }
+
+  .form-wrap select{
+    color:var(--ouro) !important;
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:linear-gradient(45deg,transparent 50%,var(--ouro) 50%),linear-gradient(135deg,var(--ouro) 50%,transparent 50%) !important;
+    background-position:calc(100% - 18px) 20px,calc(100% - 13px) 20px !important;
+    background-size:5px 5px,5px 5px !important;
+    background-repeat:no-repeat !important;
+  }
+  .form-wrap select option{background:var(--verde-dark);color:var(--marfim);}
+
+  .form-wrap input:focus,
+  .form-wrap select:focus,
+  .form-wrap textarea:focus{
+    outline:none;
+    border-color:var(--ouro) !important;
+    background:rgba(198,166,100,.06) !important;
+  }
+  .form-wrap input:focus-visible,
+  .form-wrap select:focus-visible,
+  .form-wrap button:focus-visible{
+    outline:2px solid var(--ouro);
+    outline-offset:2px;
+  }
+
+  .form-wrap label{
+    color:var(--marfim) !important;
+    font-size:12px !important;
+    font-weight:300 !important;
+  }
+
+  .form-wrap button,
+  .form-wrap input[type="submit"]{
+    width:100% !important;
+    height:56px;
+    margin-top:16px;
+    background:transparent !important;
+    border:1px solid var(--ouro) !important;
+    border-radius:4px !important;
+    color:var(--ouro) !important;
+    font-family:'Poppins',sans-serif !important;
+    font-size:12px !important;
+    font-weight:500 !important;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:background .25s var(--ease),color .25s var(--ease);
+  }
+  .form-wrap button:hover,
+  .form-wrap input[type="submit"]:hover{
+    background:var(--ouro) !important;
+    color:var(--verde) !important;
+  }
+
+  /* mensagens de erro/sucesso do RD */
+  .form-wrap .bricks-form__label,
+  .form-wrap .rd-text,
+  .form-wrap span{color:var(--marfim) !important;}
+
+  /* ---------- Rodapé ---------- */
+  footer{
+    padding:24px 24px 40px;
+    text-align:center;
+  }
+  footer p{
+    max-width:560px;
+    margin:0 auto;
+    font-size:11px;
+    line-height:1.7;
+    color:#FFFFFF;
+    opacity:.55;
+  }
+  footer sup{font-size:8px;}
+
+  @keyframes fade{
+    from{opacity:0;transform:translateY(12px);}
+    to{opacity:1;transform:none;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+
+  @media (max-width:420px){
+    .page{padding-top:36px;}
+    .selo{max-width:210px;}
+  }
+</style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <img
+      class="selo"
+      src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png"
+      alt="Coach Nutricional® - Certificação Internacional em Saúde">
+
+    <div class="chamada">
+      <h1>Coach Nutricional<sup>®</sup></h1>
+      <p>Certificação Internacional em Saúde</p>
+    </div>
+
+    <div class="form-wrap">
+      <div role="main" id="lista-de-espera-coach-nutricional-151b0a7a7f94e37fc622"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      COACH NUTRICIONAL<sup>®</sup> é marca registrada no Instituto Nacional da Propriedade
+      Industrial (INPI), processos nº 929787609, 929788800, 929788958, 929789199 e 929789652.
+      Vigência até 01/10/2034.
+    </p>
+  </footer>
+
+  <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+  <script type="text/javascript">
+    new RDStationForms('lista-de-espera-coach-nutricional-151b0a7a7f94e37fc622', 'UA-72189437-19').createForm();
+  </script>
+
+</body>
+</html>
