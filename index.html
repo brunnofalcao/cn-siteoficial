@@ -4,17 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- INDEXAÇÃO LIBERADA (exigência Meta / Google Search Console) -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="googlebot" content="index, follow">
+
 <title>Coach Nutricional® | Certificação Internacional em Saúde</title>
-<meta name="description" content="Coach Nutricional® é a Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos. Entre na lista de espera.">
+<meta name="description" content="COACH NUTRICIONAL® é a Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos. Marca registrada no INPI. Uma marca da Science Play.">
+<meta name="author" content="Science Play">
 <link rel="canonical" href="https://www.coachnutricional.com.br/">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Coach Nutricional">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Coach Nutricional®">
 <meta property="og:title" content="Coach Nutricional® | Certificação Internacional em Saúde">
-<meta property="og:description" content="Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos.">
+<meta property="og:description" content="Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos. Uma marca da Science Play.">
 <meta property="og:url" content="https://www.coachnutricional.com.br/">
 <meta property="og:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coach Nutricional® | Certificação Internacional em Saúde">
+<meta name="twitter:description" content="Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos.">
+<meta name="twitter:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png">
 
 <link rel="icon" href="https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png">
 
@@ -25,12 +34,56 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Coach Nutricional",
-  "alternateName": "COACH NUTRICIONAL®",
-  "url": "https://www.coachnutricional.com.br",
-  "logo": "https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png",
-  "description": "Certificação Internacional em Saúde para nutricionistas, médicos e psicólogos."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.coachnutricional.com.br/#organizacao",
+      "name": "Science Play",
+      "legalName": "Science Play Cursos LTDA",
+      "taxID": "33.612.911/0001-29",
+      "vatID": "33.612.911/0001-29",
+      "url": "https://www.coachnutricional.com.br",
+      "logo": "https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png",
+      "email": "contato@scienceplay.com",
+      "description": "Ecossistema de educação em saúde para médicos, nutricionistas e demais profissionais da área.",
+      "sameAs": [
+        "https://www.instagram.com/coachnutricionalbr"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contato@scienceplay.com",
+        "availableLanguage": ["pt-BR"]
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "COACH NUTRICIONAL®",
+        "slogan": "Ciência e Comportamento em Ação."
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.coachnutricional.com.br/#site",
+      "url": "https://www.coachnutricional.com.br",
+      "name": "Coach Nutricional®",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.coachnutricional.com.br/#organizacao" }
+    },
+    {
+      "@type": "Course",
+      "name": "Certificação COACH NUTRICIONAL®",
+      "description": "Certificação clínico-comportamental para nutricionistas, médicos e psicólogos, estruturada em 7 pilares científicos, 17 ferramentas operacionais e protocolo de 12 sessões com prática supervisionada.",
+      "url": "https://www.coachnutricional.com.br/certificacao",
+      "inLanguage": "pt-BR",
+      "provider": { "@id": "https://www.coachnutricional.com.br/#organizacao" }
+    }
+  ]
 }
 </script>
 
@@ -63,9 +116,9 @@
   .page{
     flex:1;
     width:100%;
-    max-width:520px;
+    max-width:560px;
     margin:0 auto;
-    padding:48px 24px 32px;
+    padding:48px 24px 8px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -160,7 +213,8 @@
   }
   .form-wrap input:focus-visible,
   .form-wrap select:focus-visible,
-  .form-wrap button:focus-visible{
+  .form-wrap button:focus-visible,
+  a:focus-visible{
     outline:2px solid var(--ouro);
     outline-offset:2px;
   }
@@ -199,18 +253,123 @@
   .form-wrap .rd-text,
   .form-wrap span{color:var(--marfim) !important;}
 
-  /* ---------- Rodapé ---------- */
-  footer{
-    padding:24px 24px 40px;
-    text-align:center;
-  }
-  footer p{
-    max-width:560px;
+  /* ---------- Conteúdo institucional ---------- */
+  .conteudo{
+    width:100%;
+    max-width:720px;
     margin:0 auto;
-    font-size:11px;
+    padding:0 24px;
+  }
+
+  .bloco{
+    padding:44px 0 4px;
+    border-top:1px solid rgba(198,166,100,.22);
+    margin-top:44px;
+  }
+
+  .bloco h2{
+    margin:0 0 18px;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--ouro);
+  }
+
+  .bloco p{
+    margin:0 0 16px;
+    font-size:14px;
+    line-height:1.85;
+    color:var(--marfim);
+    opacity:.9;
+  }
+
+  .bloco p strong{font-weight:500;opacity:1;}
+
+  .lista{
+    margin:0 0 16px;
+    padding:0;
+    list-style:none;
+  }
+  .lista li{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:9px;
+    font-size:14px;
     line-height:1.7;
+    opacity:.9;
+  }
+  .lista li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:11px;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--ouro);
+  }
+
+  .link-cta{
+    display:inline-block;
+    margin-top:10px;
+    padding:15px 28px;
+    border:1px solid var(--ouro);
+    border-radius:4px;
+    color:var(--ouro);
+    text-decoration:none;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    transition:background .25s var(--ease),color .25s var(--ease);
+  }
+  .link-cta:hover{background:var(--ouro);color:var(--verde);}
+
+  .bloco a{color:var(--ouro);}
+
+  /* ---------- Rodapé institucional ---------- */
+  footer{
+    margin-top:56px;
+    padding:36px 24px 48px;
+    background:var(--verde-dark);
+  }
+  .rodape-inner{
+    max-width:720px;
+    margin:0 auto;
+  }
+  .rodape-marca{
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--marfim);
+    margin:0 0 4px;
+  }
+  .rodape-slogan{
+    font-size:11px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--ouro);
+    margin:0 0 22px;
+  }
+  .rodape-dados{
+    margin:0 0 20px;
+    font-size:12px;
+    line-height:1.9;
     color:#FFFFFF;
-    opacity:.55;
+    opacity:.7;
+  }
+  .rodape-dados a{color:var(--ouro);text-decoration:none;}
+  .rodape-dados a:hover{text-decoration:underline;}
+  .rodape-legal{
+    margin:0;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.1);
+    font-size:11px;
+    line-height:1.75;
+    color:#FFFFFF;
+    opacity:.5;
   }
   footer sup{font-size:8px;}
 
@@ -237,7 +396,8 @@
     <img
       class="selo"
       src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1785343246/COACH_NUTRICIONAL_1_oxojkw.png"
-      alt="Coach Nutricional® - Certificação Internacional em Saúde">
+      alt="Coach Nutricional® - Certificação Internacional em Saúde"
+      width="260" height="260">
 
     <div class="chamada">
       <h1>Coach Nutricional<sup>®</sup></h1>
@@ -250,17 +410,95 @@
 
   </main>
 
+  <section class="conteudo">
+
+    <div class="bloco">
+      <h2>Sobre a certificação</h2>
+      <p>
+        <strong>COACH NUTRICIONAL®</strong> é uma certificação clínico-comportamental para profissionais
+        de saúde já habilitados. Não é uma nova profissão, nem um programa de coaching motivacional:
+        é uma camada de competência clínica aplicada sobre a formação acadêmica que o profissional
+        já possui, construída sobre ciência da mudança de comportamento e prática baseada em evidências.
+      </p>
+      <p>
+        A formação é dirigida a <strong>nutricionistas, médicos e psicólogos</strong> que atendem
+        pacientes em processos de mudança alimentar e de estilo de vida. O conteúdo se organiza em
+        7 pilares científicos, 17 ferramentas operacionais com procedimento padronizado e um
+        protocolo estruturado de 12 sessões, complementado por prática supervisionada e avaliação
+        de competências.
+      </p>
+      <p>
+        O resultado esperado ao final da certificação é objetivo: o profissional passa a operar com
+        um sistema clínico de atendimento, com roteiro definido para cada sessão, métricas de
+        acompanhamento, critérios de decisão e de escalonamento, triagens de segurança clínica e
+        regras claras de encaminhamento. A promessa central da marca é transformar orientação em
+        execução sustentada pelo paciente.
+      </p>
+      <ul class="lista">
+        <li>Público: nutricionistas, médicos e psicólogos</li>
+        <li>Estrutura: 7 pilares científicos e 17 ferramentas operacionais</li>
+        <li>Aplicação clínica: protocolo de 12 sessões com prática supervisionada</li>
+        <li>Idioma: português (Brasil)</li>
+      </ul>
+      <a class="link-cta" href="/certificacao">Conhecer a certificação</a>
+    </div>
+
+    <div class="bloco">
+      <h2>Quem somos</h2>
+      <p>
+        COACH NUTRICIONAL® é uma marca da <strong>Science Play</strong>, plataforma brasileira de
+        educação em saúde para médicos e nutricionistas, com atuação em formação continuada,
+        certificações, eventos científicos e conteúdo técnico para profissionais da área.
+      </p>
+      <p>
+        A direção técnica da certificação é conduzida pela pesquisadora <strong>Brunna Boaventura,
+        PhD</strong>, e a direção executiva por <strong>Brunno Falcão</strong>, fundador e CEO da
+        Science Play.
+      </p>
+    </div>
+
+    <div class="bloco">
+      <h2>Contato</h2>
+      <p>
+        Dúvidas sobre a certificação, imprensa e parcerias:
+        <a href="mailto:contato@scienceplay.com">contato@scienceplay.com</a>
+      </p>
+      <p>
+        Instagram oficial:
+        <a href="https://www.instagram.com/coachnutricionalbr" rel="me noopener" target="_blank">@coachnutricionalbr</a>
+      </p>
+    </div>
+
+  </section>
+
   <footer>
-    <p>
-      COACH NUTRICIONAL<sup>®</sup> é marca registrada no Instituto Nacional da Propriedade
-      Industrial (INPI), processos nº 929787609, 929788800, 929788958, 929789199 e 929789652.
-      Vigência até 01/10/2034.
-    </p>
+    <div class="rodape-inner">
+      <p class="rodape-marca">Coach Nutricional<sup>®</sup></p>
+      <p class="rodape-slogan">Ciência e Comportamento em Ação.</p>
+
+      <p class="rodape-dados">
+        <strong>Science Play Cursos LTDA</strong><br>
+        CNPJ 33.612.911/0001-29<br>
+        Brasília / DF &nbsp;·&nbsp; Brasil<br>
+        E-mail: <a href="mailto:contato@scienceplay.com">contato@scienceplay.com</a><br>
+        Instagram: <a href="https://www.instagram.com/coachnutricionalbr" rel="me noopener" target="_blank">@coachnutricionalbr</a><br>
+        Site: <a href="https://www.coachnutricional.com.br">www.coachnutricional.com.br</a>
+      </p>
+
+      <p class="rodape-legal">
+        COACH NUTRICIONAL<sup>®</sup> é marca registrada no Instituto Nacional da Propriedade
+        Industrial (INPI), processos nº 929787609, 929788800, 929788958, 929789199 e 929789652.
+        Vigência até 01/10/2034.<br>
+        © 2026 Science Play. Todos os direitos reservados.
+      </p>
+    </div>
   </footer>
 
-  <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+  <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js" defer></script>
   <script type="text/javascript">
-    new RDStationForms('lista-de-espera-coach-nutricional-151b0a7a7f94e37fc622', 'UA-72189437-19').createForm();
+    window.addEventListener('load', function () {
+      new RDStationForms('lista-de-espera-coach-nutricional-151b0a7a7f94e37fc622', 'UA-72189437-19').createForm();
+    });
   </script>
 
 </body>
