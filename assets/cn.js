@@ -3,14 +3,14 @@
 
   /* ─── Tabela de preços ─── */
   var TIERS = {
-    pro: { anchor:'R$ 1.997', price:'1.297', priceFull:'R$ 1.297', save:'Condição de setembro: economize R$ 700',
-           inst:'12x de R$ 108,08', label:'Profissional · setembro',
-           terms:'Prazo de 12 meses para concluir a formação. Primeiro ano de membership incluso.',
-           url:'https://pay.coachnutricional.com.br/profissional' },
-    est: { anchor:'R$ 997', price:'697', priceFull:'R$ 697', save:'Condição de setembro: economize R$ 300',
-           inst:'12x de R$ 58,08', label:'Estudante · setembro',
-           terms:'Requer comprovação de matrícula em graduação da área da saúde. Prazo de 12 meses para concluir.',
-           url:'https://pay.coachnutricional.com.br/estudante' }
+    pro: { anchor:'R$ 1.997', price:'134,14', cash:'R$ 1.297,00', bar:'12x R$ 134,14',
+           save:'Condição de setembro: economize R$ 700', label:'Profissional · setembro',
+           terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Prazo de 12 meses para concluir a formação. Primeiro ano de membership incluso.',
+           url:'https://pay.hotmart.com/Q107343998H?off=op5bstjb' },
+    est: { anchor:'R$ 997', price:'72,09', cash:'R$ 697,00', bar:'12x R$ 72,09',
+           save:'Condição de setembro: economize R$ 300', label:'Estudante · setembro',
+           terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Requer comprovação de matrícula em graduação da área da saúde. Prazo de 12 meses para concluir.',
+           url:'https://pay.hotmart.com/Q107343998H?off=ntka92gh' }
   };
   var tier = 'pro';
 
@@ -21,12 +21,11 @@
     var t = TIERS[tier];
     $('anchor').textContent = t.anchor;
     $('price').textContent  = t.price;
+    $('cash').textContent   = t.cash;
     $('save').textContent   = t.save;
-    $('inst').textContent   = t.inst;
     $('terms').textContent  = t.terms;
-    $('mbar-anchor').textContent = t.anchor;
-    $('mbar-price').textContent  = t.priceFull;
-    $('mbar-lb').textContent     = t.label;
+    if($('mbar-price')) $('mbar-price').textContent = t.bar;
+    if($('mbar-lb'))    $('mbar-lb').textContent    = t.label;
     $('checkout').setAttribute('href', t.url);
   }
 
@@ -115,7 +114,7 @@
   try{ utm = sessionStorage.getItem('cn_utm') || ''; }catch(e){}
   if(utm){
     document.addEventListener('click', function(ev){
-      var a = ev.target.closest('a[href^="https://pay."]');
+      var a = ev.target.closest('a[href*="pay.hotmart.com"]');
       if(a && a.href.indexOf('utm_') === -1){
         a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + utm.replace(/^\?/,'');
       }

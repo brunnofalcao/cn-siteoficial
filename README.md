@@ -20,17 +20,20 @@ llms.txt                      → resumo estruturado para motores generativos
 
 ## Antes de publicar
 
-1. **Links de checkout.** Em `assets/cn.js`, objeto `TIERS`, trocar as duas URLs `https://pay.coachnutricional.com.br/...` pelas reais. As UTMs são propagadas automaticamente.
-2. **Renovação do membership.** Valor ainda não definido. A FAQ fala em renovação opcional, sem número.
+1. **Renovação do membership.** Valor ainda não definido. A FAQ fala em renovação opcional, sem número.
 3. **Garantia.** Está em 7 dias. Se subir para 15, alterar em `index.html` (FAQ, bloco `.guarantee` e `.trust`) e no JSON-LD da FAQ.
 4. **Contagem regressiva.** Em `assets/cn.js`, constante `DEADLINE`, hoje `2026-09-30T23:59:59-03:00`.
 
 ## Preços vigentes
 
-| Perfil | Padrão | Setembro | Parcelado |
-|---|---|---|---|
-| Profissional de saúde | R$ 1.997 | R$ 1.297 | 12x R$ 108,08 |
-| Estudante de graduação | R$ 997 | R$ 697 | 12x R$ 58,08 |
+| Perfil | Padrão | Destaque na página | À vista | Checkout |
+|---|---|---|---|---|
+| Profissional de saúde | R$ 1.997 | 12x de R$ 134,14 | R$ 1.297,00 | `pay.hotmart.com/Q107343998H?off=op5bstjb` |
+| Estudante de graduação | R$ 997 | 12x de R$ 72,09 | R$ 697,00 | `pay.hotmart.com/Q107343998H?off=ntka92gh` |
+
+O número em destaque no bloco de preço é a parcela, com asterisco. O valor à vista aparece na linha logo abaixo. A nota do asterisco informa que o parcelamento tem juros da plataforma.
+
+O parcelamento da Hotmart tem juros (12x R$ 134,14 = R$ 1.609,68). Por isso a expressão "sem juros" foi removida de todo o site. Não reintroduzir.
 
 Para alterar, editar o objeto `TIERS` em `assets/cn.js` e o bloco `.price` em `index.html`.
 
@@ -46,6 +49,9 @@ Não reintroduzir sem contrato assinado ou confirmação:
 - Logos de Harvard, Mayo Clinic, Duke ou de qualquer instituição de terceiros
 - Mayo Clinic como corpo docente (não há docente confirmado da Mayo, só serve como referência metodológica)
 - Kit Físico do Paciente e Plataforma Clínica (produtos futuros)
+- "Sem juros" no parcelamento (o parcelamento da Hotmart tem juros)
+- Toolkit dos 26 instrumentos, prática supervisionada, avaliação por rubrica e mentor coaching
+- Protocolo engessado em 12 sessões, 12 semanas, 50 minutos ou fases por mês. O Módulo de Aplicação é apresentado como estrutura adaptável
 - Qualquer docente fora da grade oficial
 
 ## Pendências de conteúdo
