@@ -586,3 +586,20 @@ h1,h2{text-wrap:balance}
   .nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1.5px;background:var(--ouro);transform:scaleX(0);transform-origin:left;transition:transform .28s var(--ease)}
   .nav-links a:hover::after{transform:scaleX(1)}
 }
+
+/* ───── Bandeira do docente na grade ───── */
+.aula-d .flag{font-style:normal;margin-right:7px;font-size:14px;line-height:1;vertical-align:-1px}
+
+/* ───── O que a certificação entrega ───── */
+.entrega{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;max-width:1000px;margin:0 auto}
+.en{display:flex;gap:14px;background:var(--branco);border:1px solid var(--linha);border-radius:var(--r-m);padding:22px 20px;align-items:flex-start;transition:border-color .25s var(--ease),box-shadow .25s var(--ease)}
+.en-i{flex:0 0 30px;height:30px;border-radius:8px;background:var(--verde);color:var(--ouro);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;margin-top:1px}
+.en p{font-size:15px;line-height:1.6;color:var(--tinta);margin:0}
+.en p b{color:var(--verde);font-weight:700}
+@media (min-width:901px){ .en:hover{border-color:var(--ouro);box-shadow:var(--sh-m)} }
+@media (max-width:640px){
+  .entrega{grid-template-columns:1fr;gap:10px}
+  .en{padding:17px 16px;gap:12px}
+  .en p{font-size:14.5px}
+  .en-i{flex-basis:26px;height:26px;font-size:12.5px}
+}

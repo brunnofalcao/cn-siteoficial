@@ -46,7 +46,7 @@ Para alterar, editar o objeto `TIERS` em `assets/cn.js` e o bloco `.price` em `i
 Não reintroduzir sem contrato assinado ou confirmação:
 
 - "Certificação internacional" e "registrado no MEC"
-- Logos de Harvard, Mayo Clinic, Duke ou de qualquer instituição de terceiros
+- Logos de Harvard, Mayo Clinic, Duke ou de qualquer instituição de terceiros. Só entram se houver arquivo licenciado hospedado no Cloudinary do projeto. Nunca fazer hotlink de logo em site de universidade ou Wikimedia: quebra, é frágil e é uso de marca sem autorização
 - Mayo Clinic como corpo docente (não há docente confirmado da Mayo, só serve como referência metodológica)
 - Kit Físico do Paciente e Plataforma Clínica (produtos futuros)
 - "Sem juros" no parcelamento (o parcelamento da Hotmart tem juros)
