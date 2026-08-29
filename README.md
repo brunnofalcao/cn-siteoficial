@@ -53,6 +53,7 @@ Não reintroduzir sem contrato assinado ou confirmação:
 - Toolkit dos 26 instrumentos, prática supervisionada, avaliação por rubrica e mentor coaching
 - Protocolo engessado em 12 sessões, 12 semanas, 50 minutos ou fases por mês. O Módulo de Aplicação é apresentado como estrutura adaptável
 - Qualquer docente fora da grade oficial
+- Nomes marcados como "a confirmar" ou placeholders de docente. Só entra nome confirmado. A aula "Comportamento alimentar disfuncional e crenças" está publicada sem docente até a definição
 
 ## Pendências de conteúdo
 
