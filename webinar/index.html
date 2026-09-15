@@ -36,7 +36,7 @@
 window.CN = {
   rdPublicToken  : "0d0a7a2c54867e2123724757fbd2280d",
   rdIdentifier   : "webinar-obesidade-29-09",
-  rdCampoFormacao: "cf_qual_sua_formacao",
+  rdCampoFormacao: "cf_formacao_profissional",
   rdChatLoaderId : "",
   metaPixelId    : "460696430970324",
   ga4Id          : "",
@@ -295,8 +295,8 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
 
       <div class="faces">
         <div class="av">
-          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1785766218/Brunna_Boaventura_kcfe1x.png" alt="Dra. Brunna Boaventura" width="46" height="46" loading="lazy">
-          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1785766220/Brunno_Falca%CC%83o_sdu5ze.png" alt="Brunno Falc&atilde;o" width="46" height="46" loading="lazy">
+          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1775084964/Brunna_Boaventura_e5kpav.png" alt="Dra. Brunna Boaventura" width="46" height="46" loading="lazy">
+          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1775084963/Brunno_Falca%CC%83o_ojgjqo.png" alt="Brunno Falc&atilde;o" width="46" height="46" loading="lazy">
         </div>
         <p>Com <b>Dra. Brunna Boaventura</b> e <b>Brunno Falcão</b><br>Certificação COACH NUTRICIONAL<sup>®</sup></p>
       </div>
@@ -342,14 +342,16 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
           </select>
         </div>
         <div class="field">
-          <label for="profissao">Sua forma&ccedil;&atilde;o</label>
+          <label for="profissao">Qual sua forma&ccedil;&atilde;o?</label>
           <select id="profissao" name="profissao" required>
             <option value="">Selecione</option>
             <option>Nutricionista</option>
-            <option>Estudante de Nutri&ccedil;&atilde;o</option>
-            <option>M&eacute;dico(a)</option>
-            <option>Psic&oacute;logo(a)</option>
-            <option>Outra forma&ccedil;&atilde;o em sa&uacute;de</option>
+            <option>M&eacute;dico</option>
+            <option>Educa&ccedil;&atilde;o F&iacute;sica</option>
+            <option>Estudante Nutri&ccedil;&atilde;o</option>
+            <option>Estudante Medicina</option>
+            <option>Estudante Ed. F&iacute;sica</option>
+            <option>Outros</option>
           </select>
         </div>
         </div>
@@ -442,7 +444,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
     </div>
     <div class="cards two">
       <article class="sp">
-        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1785766218/Brunna_Boaventura_kcfe1x.png" alt="Dra. Brunna Boaventura" width="520" height="620" loading="lazy"></div>
+        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1775084964/Brunna_Boaventura_e5kpav.png" alt="Dra. Brunna Boaventura" width="520" height="620" loading="lazy"></div>
         <div>
           <h3>Dra. Brunna Boaventura</h3>
           <p class="role">Diretora técnica · COACH NUTRICIONAL®</p>
@@ -450,7 +452,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
         </div>
       </article>
       <article class="sp">
-        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1785766220/Brunno_Falca%CC%83o_sdu5ze.png" alt="Brunno Falc&atilde;o" width="520" height="620" loading="lazy"></div>
+        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1775084963/Brunno_Falca%CC%83o_ojgjqo.png" alt="Brunno Falc&atilde;o" width="520" height="620" loading="lazy"></div>
         <div>
           <h3>Brunno Falcão</h3>
           <p class="role">Fundador e CEO · Science Play</p>
@@ -613,7 +615,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
       celular: form.telefone.value.trim(),
       estado: form.estado.value
     };
-    data[C.rdCampoFormacao || 'cf_qual_sua_formacao'] = form.profissao.value;
+    data[C.rdCampoFormacao || 'cf_formacao_profissional'] = form.profissao.value;
 
     if(!data.nome || !data.email || !data.celular || !data.estado || !form.profissao.value){ return fail('Preencha todos os campos para continuar.'); }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){ return fail('Confira o seu e-mail.'); }
