@@ -117,7 +117,7 @@ header.top{position:sticky;top:0;z-index:60;background:rgba(8,36,35,.9);backdrop
 .brand{display:flex;align-items:center;gap:9px;color:var(--marfim)}
 .brand img{width:26px;height:26px;object-fit:contain}
 .brand span{font-family:'Poppins',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.13em}
-.top .when-pill{font-size:12px;color:rgba(245,243,238,.7);font-weight:500}
+.top .when-pill{font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:var(--ouro);padding:6px 14px;border-radius:999px;border:1px solid rgba(198,166,100,.4);background:rgba(198,166,100,.1)}
 .top .btn{display:none}
 
 /* BOTÕES */
@@ -137,6 +137,7 @@ header.top{position:sticky;top:0;z-index:60;background:rgba(8,36,35,.9);backdrop
 .hero:before{content:"";position:absolute;inset:-25% -30% auto -30%;height:460px;background:radial-gradient(60% 60% at 50% 0%,rgba(198,166,100,.18),transparent 70%);pointer-events:none}
 .hero-grid{position:relative;display:grid;gap:26px}
 .datebar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.tag.big{font-size:clamp(15px,2.6vw,18.5px) !important;padding:11px 20px !important;border-radius:11px !important;background:rgba(198,166,100,.17) !important;border-color:rgba(198,166,100,.5) !important;color:var(--ouro) !important;letter-spacing:.01em}
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;font-family:'Poppins',sans-serif;padding:7px 13px;border-radius:9px;background:rgba(198,166,100,.12);border:1px solid rgba(198,166,100,.34);color:var(--ouro-soft)}
 .tag.plain{background:rgba(245,243,238,.04);border-color:var(--linha);color:rgba(245,243,238,.82);font-weight:500;font-family:'Inter',sans-serif}
 h1{font-size:clamp(29px,7.4vw,48px)}
@@ -169,6 +170,28 @@ h1 em{font-style:normal;color:var(--ouro)}
 .field label{display:block;font-size:12.5px;font-weight:500;margin-bottom:5px;color:rgba(245,243,238,.75)}
 .field input,.field select{width:100%;padding:15px 14px;border-radius:12px;border:1px solid var(--linha);background:rgba(8,36,35,.55);color:var(--marfim);font-size:16px;font-family:'Inter',sans-serif}
 .grid2{display:grid;grid-template-columns:.58fr 1fr;gap:10px}
+/* embed RD Station */
+.rd-form{margin-top:4px}
+.rd-form *{font-family:'Inter',sans-serif !important;box-sizing:border-box}
+.rd-form .bricks--component,.rd-form .bricks-form{background:transparent !important;padding:0 !important;margin:0 !important;max-width:100% !important}
+.rd-form label,.rd-form .bricks-form__label{display:block !important;font-size:12.5px !important;font-weight:500 !important;margin-bottom:6px !important;color:rgba(245,243,238,.75) !important;text-align:left !important}
+.rd-form input[type="text"],.rd-form input[type="email"],.rd-form input[type="tel"],.rd-form input[type="number"],.rd-form select,.rd-form textarea{
+  width:100% !important;padding:15px 14px !important;border-radius:12px !important;border:1px solid var(--linha) !important;
+  background:rgba(8,36,35,.55) !important;color:var(--marfim) !important;font-size:16px !important;box-shadow:none !important;height:auto !important}
+.rd-form input:focus,.rd-form select:focus,.rd-form textarea:focus{outline:2px solid rgba(198,166,100,.55) !important;outline-offset:1px !important;border-color:rgba(198,166,100,.55) !important}
+.rd-form select option{background:#0d3231;color:var(--marfim)}
+.rd-form ::placeholder{color:rgba(245,243,238,.38) !important}
+.rd-form .bricks-form__field{margin-bottom:12px !important;padding:0 !important}
+.rd-form input[type="checkbox"]{width:16px !important;height:16px !important;accent-color:var(--ouro);margin-right:8px !important;vertical-align:top;margin-top:3px !important}
+.rd-form .bricks-form__field--checkbox label,.rd-form .bricks-form__field--terms label{font-size:11.8px !important;color:rgba(245,243,238,.6) !important;line-height:1.5 !important;display:inline !important}
+.rd-form .bricks-form__submit,.rd-form .bricks-form__submit button,.rd-form button[type="submit"]{
+  width:100% !important;display:flex !important;align-items:center !important;justify-content:center !important;
+  font-family:'Poppins',sans-serif !important;font-weight:600 !important;font-size:16px !important;
+  padding:17px 26px !important;border-radius:999px !important;border:0 !important;cursor:pointer !important;
+  background:var(--ouro) !important;color:var(--petroleo-900) !important;text-transform:none !important;margin-top:6px !important;box-shadow:none !important}
+.rd-form .bricks-form__submit button:hover,.rd-form button[type="submit"]:hover{filter:brightness(1.07)}
+.rd-form .bricks-form__privacy,.rd-form small,.rd-form .bricks-form__disclaimer{font-size:11.5px !important;color:rgba(245,243,238,.45) !important;text-align:center !important;display:block !important;margin-top:10px !important}
+.rd-form .bricks-form__error,.rd-form .error,.rd-form [class*="error"]{color:#ffd7cf !important;font-size:12px !important}
 .field input:focus,.field select:focus{outline:2px solid rgba(198,166,100,.55);outline-offset:1px}
 .field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ouro) 50%),linear-gradient(135deg,var(--ouro) 50%,transparent 50%);background-position:calc(100% - 19px) 23px,calc(100% - 13px) 23px;background-size:6px 6px;background-repeat:no-repeat}
 .consent{display:flex;gap:9px;align-items:flex-start;margin:13px 0 15px}
@@ -277,14 +300,13 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
   <div class="wrap hero-grid">
     <div class="hero-order-copy">
       <div class="datebar">
-        <span class="tag">Terça, 29/09 · 20h às 22h</span>
+        <span class="tag big">Ter&ccedil;a, 29/09 &middot; 20h &agrave;s 22h</span>
         <span class="tag plain">Online · gratuito</span>
         <span class="tag plain">Para nutricionistas</span>
       </div>
 
       <h1>Obesidade e Emagrecimento:<br><em>um mercado aquecido muito al&eacute;m do GLP-1</em></h1>
       <p class="kicker">O seu paciente emagreceu com a caneta. E agora, nutricionista?</p>
-      <p class="kicker">Obesidade e emagrecimento: um mercado aquecido muito além do GLP-1.</p>
       <p class="sub">Duas horas, ao vivo, sobre o que fazer com o paciente que perdeu peso com medicação, e como sustentar esse resultado quando a medicação termina.</p>
 
       <ul class="hero-bullets">
@@ -295,8 +317,8 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
 
       <div class="faces">
         <div class="av">
-          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1775084964/Brunna_Boaventura_e5kpav.png" alt="Dra. Brunna Boaventura" width="46" height="46" loading="lazy">
-          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1775084963/Brunno_Falca%CC%83o_ojgjqo.png" alt="Brunno Falc&atilde;o" width="46" height="46" loading="lazy">
+          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1789488634/Brunna_Boaventura_loine3.png" alt="Dra. Brunna Boaventura" width="46" height="46" loading="lazy">
+          <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_140,h_140,c_fill,g_face,f_auto,q_auto/v1789488635/Foto_Brunno_Falca%CC%83o_-_Diariamente_Club_q4ebom.png" alt="Brunno Falc&atilde;o" width="46" height="46" loading="lazy">
         </div>
         <p>Com <b>Dra. Brunna Boaventura</b> e <b>Brunno Falcão</b><br>Certificação COACH NUTRICIONAL<sup>®</sup></p>
       </div>
@@ -315,52 +337,9 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
 
       <div class="form-msg" id="formMsg" role="alert"></div>
 
-      <form id="leadForm" novalidate>
-        <div class="field">
-          <label for="nome">Nome completo</label>
-          <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como quer ser chamado(a)">
-        </div>
-        <div class="field">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required placeholder="seu@email.com">
-        </div>
-        <div class="field">
-          <label for="telefone">WhatsApp (com DDD)</label>
-          <input type="tel" id="telefone" name="telefone" autocomplete="tel" required inputmode="numeric" placeholder="(00) 00000-0000">
-        </div>
-        <div class="grid2">
-        <div class="field">
-          <label for="estado">Estado</label>
-          <select id="estado" name="estado" required>
-            <option value="">UF</option>
-            <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
-            <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
-            <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
-            <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-            <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
-            <option>SE</option><option>TO</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="profissao">Qual sua forma&ccedil;&atilde;o?</label>
-          <select id="profissao" name="profissao" required>
-            <option value="">Selecione</option>
-            <option>Nutricionista</option>
-            <option>M&eacute;dico</option>
-            <option>Educa&ccedil;&atilde;o F&iacute;sica</option>
-            <option>Estudante Nutri&ccedil;&atilde;o</option>
-            <option>Estudante Medicina</option>
-            <option>Estudante Ed. F&iacute;sica</option>
-            <option>Outros</option>
-          </select>
-        </div>
-        </div>
-        <div class="consent">
-          <input type="checkbox" id="lgpd" name="lgpd" required>
-          <label for="lgpd">Autorizo o contato por e-mail e WhatsApp sobre esta aula e conte&uacute;dos da Science Play, conforme a <a href="/politica-de-privacidade">Pol&iacute;tica de Privacidade</a>.</label>
-        </div>
-        <button type="submit" class="btn block js-cta" data-cta="form" id="submitBtn">Quero participar ao vivo</button>
-      </form>
+      <div class="rd-form" id="rdForm">
+        <div role="main" id="webinar-coach-nutricional-de74f8e088ee285706ae"></div>
+      </div>
 
       <p class="form-note">Inscrição gratuita · vagas limitadas pela capacidade da transmissão.</p>
     </div>
@@ -373,7 +352,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
     <div><b>150 mil+</b><span>profissionais de saúde no ecossistema Science Play</span></div>
     <div><b>95</b><span>países alcançados</span></div>
     <div><b>30</b><span>docentes de 5 países na certificação</span></div>
-    <div><b>IOC</b><span>patrocinador oficial do Institute of Coaching, McLean Hospital</span></div>
+    <div><b>7</b><span>pilares do m&eacute;todo COACH NUTRICIONAL&reg;</span></div>
   </div>
 </section>
 
@@ -421,7 +400,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
       </div></div>
       <div class="bl"><div class="n">03</div><div>
         <h3>Comportamento alimentar sob medicação</h3>
-        <p>Food noise, recompensa, restrição e comer emocional: o que observar na consulta, quais sinais de risco não podem passar e quando encaminhar.</p>
+        <p>Food noise, recompensa, restrição e alimenta&ccedil;&atilde;o emocional: o que observar na consulta, quais sinais de risco não podem passar e quando encaminhar.</p>
       </div></div>
       <div class="bl"><div class="n">04</div><div>
         <h3>Da consulta avulsa ao programa</h3>
@@ -444,15 +423,15 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
     </div>
     <div class="cards two">
       <article class="sp">
-        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1775084964/Brunna_Boaventura_e5kpav.png" alt="Dra. Brunna Boaventura" width="520" height="620" loading="lazy"></div>
+        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1789488634/Brunna_Boaventura_loine3.png" alt="Dra. Brunna Boaventura" width="520" height="620" loading="lazy"></div>
         <div>
           <h3>Dra. Brunna Boaventura</h3>
           <p class="role">Diretora técnica · COACH NUTRICIONAL®</p>
-          <p>PhD e pesquisadora na UFSC, com produção científica em comportamento alimentar e mudança de hábitos. Responde pela integridade científica do método.</p>
+          <p>PhD, com produ&ccedil;&atilde;o cient&iacute;fica em comportamento alimentar e mudan&ccedil;a de h&aacute;bitos. Diretora t&eacute;cnica da certifica&ccedil;&atilde;o, responde pela integridade cient&iacute;fica do m&eacute;todo.</p>
         </div>
       </article>
       <article class="sp">
-        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1775084963/Brunno_Falca%CC%83o_ojgjqo.png" alt="Brunno Falc&atilde;o" width="520" height="620" loading="lazy"></div>
+        <div class="slot"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_520,h_620,c_fill,g_face,f_auto,q_auto/v1789488635/Foto_Brunno_Falca%CC%83o_-_Diariamente_Club_q4ebom.png" alt="Brunno Falc&atilde;o" width="520" height="620" loading="lazy"></div>
         <div>
           <h3>Brunno Falcão</h3>
           <p class="role">Fundador e CEO · Science Play</p>
@@ -522,7 +501,6 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
   <a href="#inscricao" class="btn js-cta" data-cta="sticky">Garantir vaga</a>
 </div>
 
-<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>
 
 <script>
 (function(){
@@ -597,61 +575,25 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
 
   /* Envio */
   var form = document.getElementById('leadForm');
-  var btn  = document.getElementById('submitBtn');
-  var msg  = document.getElementById('formMsg');
-  var started = false;
-  form.addEventListener('input', function(){
-    if(!started){ started = true; track('InitiateCheckout',{content_name:'Form Webinar 29-09'}); }
-  });
-  function fail(t){ msg.className='form-msg err'; msg.textContent=t; btn.disabled=false; btn.textContent='Quero participar ao vivo'; }
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    msg.className='form-msg'; msg.textContent='';
-
-    var data = {
-      nome: form.nome.value.trim(),
-      email: form.email.value.trim(),
-      celular: form.telefone.value.trim(),
-      estado: form.estado.value
-    };
-    data[C.rdCampoFormacao || 'cf_formacao_profissional'] = form.profissao.value;
-
-    if(!data.nome || !data.email || !data.celular || !data.estado || !form.profissao.value){ return fail('Preencha todos os campos para continuar.'); }
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){ return fail('Confira o seu e-mail.'); }
-    if(data.celular.replace(/\D/g,'').length < 10){ return fail('Informe o WhatsApp com DDD.'); }
-    if(!form.lgpd.checked){ return fail('É preciso autorizar o contato para concluir a inscrição.'); }
-
-    btn.disabled = true; btn.textContent = 'Confirmando...';
-    track('FormSubmit',{form:'webinar-29-09'});
-
-    var payload = Object.assign({
-      token_rdstation: C.rdPublicToken,
-      identificador: C.rdIdentifier,
-      traffic_source: document.referrer || 'direto'
-    }, data, utm);
-
-    var finished = false;
-    function done(){
-      if(finished) return; finished = true;
-      track('Lead',{content_name:'Webinar Obesidade 29-09',value:0,currency:'BRL'});
-      track('CompleteRegistration',{content_name:'Webinar Obesidade 29-09'});
-      var url = C.thankYouUrl || '/obrigado';
-      var extra = new URLSearchParams(utm).toString();
-      setTimeout(function(){
-        location.href = url + (extra ? (url.indexOf('?')>-1?'&':'?') + extra : '');
-      }, 300);
+  if(!form){
+    var rd = document.getElementById('rdForm');
+    if(rd){
+      rd.addEventListener('click', function(e){
+        var t = e.target.closest('button, input[type=submit]');
+        if(t) track('FormSubmit',{form:'webinar-29-09'});
+      });
+      rd.addEventListener('input', function(){
+        if(!window.__cnStarted){ window.__cnStarted = true; track('InitiateCheckout',{content_name:'Form Webinar 29-09'}); }
+      });
     }
-
-    if(window.RdIntegration && C.rdPublicToken){
-      try{ RdIntegration.post(payload, done); setTimeout(done, 3500); }
-      catch(err){ done(); }
-    } else {
-      console.warn('[CN] RD Station não carregado, seguindo para a página de obrigado.');
-      done();
-    }
-  });
+    return;
+  }
 })();
+</script>
+
+<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+<script type="text/javascript">
+  new RDStationForms('webinar-coach-nutricional-de74f8e088ee285706ae', 'UA-72189437-19').createForm();
 </script>
 </body>
 </html>
