@@ -34,7 +34,7 @@
      ============================================================ -->
 <script>
 window.CN = {
-  rdPublicToken  : "0d0a7a2c54867e2123724757fbd2280d",
+  rdApiKey: "COLE_AQUI_A_CHAVE_DE_API_PUBLICA",
   rdIdentifier   : "webinar-obesidade-29-09",
   rdCampoFormacao: "cf_formacao_profissional",
   rdChatLoaderId : "",
@@ -83,7 +83,7 @@ fbq('track','ViewContent',{content_name:'Webinar Obesidade 29-09',content_catego
   "mainEntity":[
     {"@type":"Question","name":"A aula é gratuita?","acceptedAnswer":{"@type":"Answer","text":"Sim. A participação ao vivo é gratuita e exige apenas inscrição prévia com nome, e-mail e WhatsApp."}},
     {"@type":"Question","name":"Qual é o horário?","acceptedAnswer":{"@type":"Answer","text":"Terça, 29 de setembro, das 20h às 22h, horário de Brasília, online e ao vivo."}},
-    {"@type":"Question","name":"Vai ter gravação?","acceptedAnswer":{"@type":"Answer","text":"A aula foi desenhada para ser assistida ao vivo. Quem se inscreve recebe todos os avisos por e-mail e WhatsApp."}},
+    {"@type":"Question","name":"Vai ter gravação?","acceptedAnswer":{"@type":"Answer","text":"Não. A aula acontece uma vez, ao vivo, e não ficará disponível depois. É necessário estar presente no dia 29/09, das 20h às 22h."}},
     {"@type":"Question","name":"É só para nutricionistas?","acceptedAnswer":{"@type":"Answer","text":"O conteúdo é desenhado para nutricionistas. Médicos, psicólogos e estudantes da área da saúde também podem participar."}},
     {"@type":"Question","name":"A aula ensina a prescrever medicação?","acceptedAnswer":{"@type":"Answer","text":"Não. O recorte é comportamento alimentar, adesão, manutenção de resultado e desenho de programas de acompanhamento, dentro do escopo da nutrição."}}
   ]
@@ -170,28 +170,6 @@ h1 em{font-style:normal;color:var(--ouro)}
 .field label{display:block;font-size:12.5px;font-weight:500;margin-bottom:5px;color:rgba(245,243,238,.75)}
 .field input,.field select{width:100%;padding:15px 14px;border-radius:12px;border:1px solid var(--linha);background:rgba(8,36,35,.55);color:var(--marfim);font-size:16px;font-family:'Inter',sans-serif}
 .grid2{display:grid;grid-template-columns:.58fr 1fr;gap:10px}
-/* embed RD Station */
-.rd-form{margin-top:4px}
-.rd-form *{font-family:'Inter',sans-serif !important;box-sizing:border-box}
-.rd-form .bricks--component,.rd-form .bricks-form{background:transparent !important;padding:0 !important;margin:0 !important;max-width:100% !important}
-.rd-form label,.rd-form .bricks-form__label{display:block !important;font-size:12.5px !important;font-weight:500 !important;margin-bottom:6px !important;color:rgba(245,243,238,.75) !important;text-align:left !important}
-.rd-form input[type="text"],.rd-form input[type="email"],.rd-form input[type="tel"],.rd-form input[type="number"],.rd-form select,.rd-form textarea{
-  width:100% !important;padding:15px 14px !important;border-radius:12px !important;border:1px solid var(--linha) !important;
-  background:rgba(8,36,35,.55) !important;color:var(--marfim) !important;font-size:16px !important;box-shadow:none !important;height:auto !important}
-.rd-form input:focus,.rd-form select:focus,.rd-form textarea:focus{outline:2px solid rgba(198,166,100,.55) !important;outline-offset:1px !important;border-color:rgba(198,166,100,.55) !important}
-.rd-form select option{background:#0d3231;color:var(--marfim)}
-.rd-form ::placeholder{color:rgba(245,243,238,.38) !important}
-.rd-form .bricks-form__field{margin-bottom:12px !important;padding:0 !important}
-.rd-form input[type="checkbox"]{width:16px !important;height:16px !important;accent-color:var(--ouro);margin-right:8px !important;vertical-align:top;margin-top:3px !important}
-.rd-form .bricks-form__field--checkbox label,.rd-form .bricks-form__field--terms label{font-size:11.8px !important;color:rgba(245,243,238,.6) !important;line-height:1.5 !important;display:inline !important}
-.rd-form .bricks-form__submit,.rd-form .bricks-form__submit button,.rd-form button[type="submit"]{
-  width:100% !important;display:flex !important;align-items:center !important;justify-content:center !important;
-  font-family:'Poppins',sans-serif !important;font-weight:600 !important;font-size:16px !important;
-  padding:17px 26px !important;border-radius:999px !important;border:0 !important;cursor:pointer !important;
-  background:var(--ouro) !important;color:var(--petroleo-900) !important;text-transform:none !important;margin-top:6px !important;box-shadow:none !important}
-.rd-form .bricks-form__submit button:hover,.rd-form button[type="submit"]:hover{filter:brightness(1.07)}
-.rd-form .bricks-form__privacy,.rd-form small,.rd-form .bricks-form__disclaimer{font-size:11.5px !important;color:rgba(245,243,238,.45) !important;text-align:center !important;display:block !important;margin-top:10px !important}
-.rd-form .bricks-form__error,.rd-form .error,.rd-form [class*="error"]{color:#ffd7cf !important;font-size:12px !important}
 .field input:focus,.field select:focus{outline:2px solid rgba(198,166,100,.55);outline-offset:1px}
 .field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ouro) 50%),linear-gradient(135deg,var(--ouro) 50%,transparent 50%);background-position:calc(100% - 19px) 23px,calc(100% - 13px) 23px;background-size:6px 6px;background-repeat:no-repeat}
 .consent{display:flex;gap:9px;align-items:flex-start;margin:13px 0 15px}
@@ -224,13 +202,13 @@ h1 em{font-style:normal;color:var(--ouro)}
 
 /* PALESTRANTES */
 .sp{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--linha);border-radius:16px;padding:18px;background:rgba(8,36,35,.5)}
-.sp .slot{width:78px;height:92px;flex:0 0 78px;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,rgba(245,243,238,.07) 0 6px,rgba(245,243,238,.03) 6px 12px);border:1px solid var(--linha);display:grid;place-items:center;text-align:center;padding:6px}
+.sp .slot{width:96px;height:114px;flex:0 0 96px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(198,166,100,.14),rgba(8,36,35,.6));border:1px solid rgba(198,166,100,.22);padding:0;display:block}
 .sp .slot span{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:8.5px;line-height:1.35;letter-spacing:.04em;color:rgba(245,243,238,.5);text-transform:uppercase}
-.sp .slot img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.sp .slot img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
 .sp h3{font-size:17.5px}
 .sp .role{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ouro);margin:5px 0 8px}
 .sp p{font-size:14px;color:rgba(245,243,238,.74)}
-@media(min-width:760px){.sp .slot{width:108px;height:128px;flex:0 0 108px}}
+@media(min-width:760px){.sp .slot{width:132px;height:158px;flex:0 0 132px}}
 
 /* FAQ */
 .faq details{border-bottom:1px solid var(--linha);padding:16px 0}
@@ -337,11 +315,54 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
 
       <div class="form-msg" id="formMsg" role="alert"></div>
 
-      <div class="rd-form" id="rdForm">
-        <div role="main" id="webinar-coach-nutricional-de74f8e088ee285706ae"></div>
-      </div>
+      <form id="leadForm" novalidate>
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como quer ser chamado(a)">
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" required placeholder="seu@email.com">
+        </div>
+        <div class="field">
+          <label for="telefone">WhatsApp (com DDD)</label>
+          <input type="tel" id="telefone" name="telefone" autocomplete="tel" required inputmode="tel" placeholder="(00) 00000-0000">
+        </div>
+        <div class="grid2">
+          <div class="field">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+              <option value="">UF</option>
+              <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+              <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+              <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+              <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+              <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+              <option>SE</option><option>TO</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="profissao">Qual sua forma&ccedil;&atilde;o?</label>
+            <select id="profissao" name="profissao" required>
+              <option value="">Selecione</option>
+              <option>Nutricionista</option>
+              <option>M&eacute;dico</option>
+              <option>Educa&ccedil;&atilde;o F&iacute;sica</option>
+              <option>Estudante Nutri&ccedil;&atilde;o</option>
+              <option>Estudante Medicina</option>
+              <option>Estudante Ed. F&iacute;sica</option>
+              <option>Outros</option>
+            </select>
+          </div>
+        </div>
+        <div class="consent">
+          <input type="checkbox" id="lgpd" name="lgpd" required>
+          <label for="lgpd">Autorizo o contato por e-mail e WhatsApp sobre esta aula e conte&uacute;dos da Science Play, conforme a <a href="/politica-de-privacidade" style="color:var(--ouro-soft)">Pol&iacute;tica de Privacidade</a>.</label>
+        </div>
+        <button type="submit" class="btn block js-cta" data-cta="form" id="submitBtn">Garantir minha vaga gratuita</button>
+      </form>
 
-      <p class="form-note">Inscrição gratuita · vagas limitadas pela capacidade da transmissão.</p>
+      <p class="form-note">Inscri&ccedil;&atilde;o gratuita &middot; ao vivo, sem grava&ccedil;&atilde;o &middot; vagas limitadas pela transmiss&atilde;o.</p>
     </div>
   </div>
 </section>
@@ -409,7 +430,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
     </div>
 
     <div class="cta-mid">
-      <a href="#inscricao" class="btn js-cta" data-cta="meio">Quero participar ao vivo · 29/09, 20h</a>
+      <a href="#inscricao" class="btn js-cta" data-cta="meio">Garantir minha vaga gratuita · 29/09, 20h</a>
     </div>
   </div>
 </section>
@@ -451,7 +472,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
     </div>
     <details class="js-faq"><summary>A aula é gratuita?</summary><p>Sim. A participação ao vivo é gratuita e exige apenas a inscrição prévia com nome, e-mail e WhatsApp.</p></details>
     <details class="js-faq"><summary>Qual é o dia e o horário?</summary><p>Terça, 29 de setembro, das 20h às 22h, horário de Brasília. Online e ao vivo.</p></details>
-    <details class="js-faq"><summary>Vai ter gravação?</summary><p>A aula foi desenhada para ser assistida ao vivo. Quem se inscreve recebe todos os avisos e orientações por e-mail e WhatsApp.</p></details>
+    <details class="js-faq"><summary>Vai ficar gravado?</summary><p>N&atilde;o. A aula acontece uma vez, ao vivo, e n&atilde;o ficar&aacute; dispon&iacute;vel depois. Quem quiser esse conte&uacute;do precisa estar presente no dia 29/09, das 20h &agrave;s 22h.</p></details>
     <details class="js-faq"><summary>É só para nutricionistas?</summary><p>O conteúdo é desenhado para nutricionistas que atendem obesidade, sobrepeso e pacientes em uso de medicação. Médicos, psicólogos e estudantes da área também podem participar.</p></details>
     <details class="js-faq"><summary>A aula ensina a prescrever medicação?</summary><p>Não. Não há orientação de prescrição, dose ou conduta medicamentosa. O recorte é comportamento alimentar, adesão, manutenção de resultado e desenho de programas, sempre dentro do escopo da nutrição.</p></details>
     <details class="js-faq"><summary>É uma aula de venda?</summary><p>É uma aula de conteúdo. Ao final, a certificação COACH NUTRICIONAL® é apresentada para quem quiser aprofundar o método. Participar não obriga a nada.</p></details>
@@ -575,25 +596,82 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
 
   /* Envio */
   var form = document.getElementById('leadForm');
-  if(!form){
-    var rd = document.getElementById('rdForm');
-    if(rd){
-      rd.addEventListener('click', function(e){
-        var t = e.target.closest('button, input[type=submit]');
-        if(t) track('FormSubmit',{form:'webinar-29-09'});
-      });
-      rd.addEventListener('input', function(){
-        if(!window.__cnStarted){ window.__cnStarted = true; track('InitiateCheckout',{content_name:'Form Webinar 29-09'}); }
-      });
-    }
-    return;
+  var btn  = document.getElementById('submitBtn');
+  var msg  = document.getElementById('formMsg');
+  var started = false;
+
+  form.addEventListener('input', function(){
+    if(!started){ started = true; track('InitiateCheckout',{content_name:'Form Webinar 29-09'}); }
+  });
+
+  function fail(t){
+    msg.className='form-msg err'; msg.textContent=t;
+    btn.disabled=false; btn.textContent='Garantir minha vaga gratuita';
   }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.className='form-msg'; msg.textContent='';
+
+    var nome = form.nome.value.trim(),
+        email = form.email.value.trim(),
+        fone = form.telefone.value.trim(),
+        uf = form.estado.value,
+        formacao = form.profissao.value;
+
+    if(!nome || !email || !fone || !uf || !formacao){ return fail('Preencha todos os campos para continuar.'); }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ return fail('Confira o seu e-mail.'); }
+    if(fone.replace(/\D/g,'').length < 10){ return fail('Informe o WhatsApp com DDD.'); }
+    if(!form.lgpd.checked){ return fail('É preciso autorizar o contato para concluir a inscrição.'); }
+
+    btn.disabled = true; btn.textContent = 'Confirmando...';
+    track('FormSubmit',{form:'webinar-29-09'});
+
+    var payload = {
+      conversion_identifier: C.rdIdentifier,
+      name: nome,
+      email: email,
+      mobile_phone: fone,
+      personal_phone: fone,
+      state: uf,
+      traffic_source: document.referrer || 'direto',
+      available_for_mailing: true
+    };
+    payload[C.rdCampoFormacao || 'cf_formacao_profissional'] = formacao;
+    Object.keys(utm).forEach(function(k){ payload[k] = utm[k]; });
+
+    function sucesso(){
+      /* o evento Lead dispara so na pagina de obrigado, para nao contar duas vezes */
+      track('SubmitApplication',{content_name:'Webinar Obesidade 29-09'});
+      var url = C.thankYouUrl || '/obrigado';
+      var extra = new URLSearchParams(utm).toString();
+      location.href = url + (extra ? (url.indexOf('?')>-1?'&':'?') + extra : '');
+    }
+
+    if(!C.rdApiKey || C.rdApiKey.indexOf('COLE_AQUI') > -1){
+      console.error('[CN] Chave de API publica do RD nao configurada.');
+      return fail('Inscrição indisponível no momento. Tente novamente em instantes.');
+    }
+
+    fetch('https://api.rd.services/platform/conversions?api_key=' + encodeURIComponent(C.rdApiKey), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ event_type: 'CONVERSION', event_family: 'CDP', payload: payload })
+    })
+    .then(function(r){
+      if(r.ok){ sucesso(); return; }
+      return r.text().then(function(t){
+        console.error('[CN] RD respondeu', r.status, t);
+        fail('Não conseguimos concluir sua inscrição. Confira os dados e tente de novo.');
+      });
+    })
+    .catch(function(err){
+      console.error('[CN] Falha de rede ao enviar para o RD:', err);
+      fail('Não conseguimos concluir sua inscrição. Confira sua conexão e tente de novo.');
+    });
+  });
 })();
 </script>
 
-<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-<script type="text/javascript">
-  new RDStationForms('webinar-coach-nutricional-de74f8e088ee285706ae', 'UA-72189437-19').createForm();
-</script>
 </body>
 </html>
