@@ -634,11 +634,13 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:rgba(245,243,
       mobile_phone: fone,
       personal_phone: fone,
       state: uf,
-      traffic_source: document.referrer || 'direto',
+      traffic_source: utm.utm_source || (document.referrer ? 'referencia' : 'direto'),
+      traffic_medium: utm.utm_medium || '',
+      traffic_campaign: utm.utm_campaign || '',
+      traffic_value: [utm.utm_content, utm.utm_term].filter(Boolean).join(' | '),
       available_for_mailing: true
     };
     payload[C.rdCampoFormacao || 'cf_formacao_profissional'] = formacao;
-    Object.keys(utm).forEach(function(k){ payload[k] = utm[k]; });
 
     function sucesso(){
       /* o evento Lead dispara so na pagina de obrigado, para nao contar duas vezes */
