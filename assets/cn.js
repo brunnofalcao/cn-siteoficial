@@ -4,11 +4,11 @@
   /* ─── Tabela de preços ─── */
   var TIERS = {
     pro: { anchor:'R$ 1.997', price:'134,14', cash:'R$ 1.297,00', bar:'12x R$ 134,14',
-           save:'Economize R$ 700 em setembro',
+           save:'Condição de Fundador: economize R$ 700',
            terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Prazo de 12 meses para concluir a formação. Primeiro ano de membership incluso.',
            url:'https://pay.hotmart.com/Q107343998H?off=op5bstjb' },
     est: { anchor:'R$ 997', price:'72,09', cash:'R$ 697,00', bar:'12x R$ 72,09',
-           save:'Economize R$ 300 em setembro',
+           save:'Condição de Fundador: economize R$ 300',
            terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Requer comprovação de matrícula em graduação da área da saúde. Prazo de 12 meses para concluir.',
            url:'https://pay.hotmart.com/Q107343998H?off=ntka92gh' }
   };
@@ -45,7 +45,7 @@
   if(document.querySelector('[data-tier]')) renderPrice();
 
   /* ─── Contagem regressiva ─── */
-  var DEADLINE = new Date('2026-09-30T23:59:59-03:00').getTime();
+  var DEADLINE = new Date('2026-10-19T23:59:59-03:00').getTime();
   function tick(){
     if(!$('cd')) return;
     var d = DEADLINE - Date.now(); if(d < 0) d = 0;
