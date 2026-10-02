@@ -25,6 +25,7 @@
     var t = TIERS[tier];
     set('anchor', t.anchor); set('price', t.price); set('cash', t.cash);
     set('save', t.save); set('terms', t.terms);
+    Array.prototype.forEach.call(document.querySelectorAll('[data-tier-bar]'), function(el){ el.textContent = t.bar; });
     Array.prototype.forEach.call(document.querySelectorAll('a.checkout'), function(a){
       a.setAttribute('href', t.url);
     });
@@ -46,9 +47,18 @@
 
   /* ─── Contagem regressiva ─── */
   var DEADLINE = new Date('2026-10-19T23:59:59-03:00').getTime();
+  var timer = null;
   function tick(){
     if(!$('cd')) return;
-    var d = DEADLINE - Date.now(); if(d < 0) d = 0;
+    var d = DEADLINE - Date.now();
+    if(d <= 0){
+      d = 0;
+      var ck = document.querySelector('.clock'), st = document.querySelector('.strip-t'), sl = document.querySelector('.strip-long');
+      if(ck) ck.style.display = 'none';
+      if(st) st.textContent = 'inscrições encerradas';
+      if(sl) sl.style.display = 'inline-flex';
+      if(timer) clearInterval(timer);
+    }
     var s = Math.floor(d / 1000);
     var pad = function(n){ return String(n).padStart(2,'0'); };
     set('cd', pad(Math.floor(s / 86400)));
@@ -56,15 +66,19 @@
     set('cm', pad(Math.floor(s % 3600 / 60)));
     set('cs', pad(s % 60));
   }
-  if($('cd')){ tick(); setInterval(tick, 1000); }
+  if($('cd')){ tick(); timer = setInterval(tick, 1000); }
 
   /* ─── Menu mobile ─── */
   var burger = $('burger'), drawer = $('drawer');
   if(burger && drawer){
-    burger.addEventListener('click', function(){
-      var open = drawer.hasAttribute('hidden');
+    var setDrawer = function(open){
       if(open){ drawer.removeAttribute('hidden'); } else { drawer.setAttribute('hidden',''); }
       burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    };
+    burger.addEventListener('click', function(){ setDrawer(drawer.hasAttribute('hidden')); });
+    document.addEventListener('keydown', function(ev){
+      if(ev.key === 'Escape' && !drawer.hasAttribute('hidden')){ setDrawer(false); burger.focus(); }
     });
   }
 

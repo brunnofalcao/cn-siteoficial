@@ -1,6 +1,53 @@
-# COACH NUTRICIONAL® · site v4
+# COACH NUTRICIONAL® · site v5
 
 Site estático de 7 páginas. Sem build, sem dependência. Suba o conteúdo desta pasta na raiz do repositório e a Vercel publica direto.
+
+## O que mudou na v5 (refinamento · 02/10/2026)
+
+Nada foi refeito. As 7 páginas, `cn.css` e `cn.js` foram refinados em cima da v4. Conteúdo, preços, regras de governança e estrutura de páginas permanecem.
+
+**Responsivo**
+- Toda grade `minmax(Npx,1fr)` virou `minmax(min(Npx,100%),1fr)`: nenhuma coluna fica mais larga que a tela. Corrige o corte lateral em telas de 320 a 360px (hero, "tudo o que está incluso", elegibilidade, segurança clínica, definição).
+- Menu completo só a partir de 1181px. Entre 1081 e 1180px os cinco links sobrepunham o botão "Garantir vaga"; agora abre o drawer.
+- Faixa de logos com colunas fixas (6 · 4 · 3 · 2 por largura) em vez de auto-fit: linhas sempre completas, logos nunca menores que a célula permite.
+- `/investimento` no mobile: o card de preço vem antes da lista "tudo o que está incluso" e deixa de ser sticky.
+- `/ficha-tecnica`: lista de dados em uma coluna no mobile (antes a coluna de valores ficava com menos de 100px).
+- Cabeçalho mais baixo no mobile (92px em vez de 104px); barra inferior respeita a safe-area do iPhone (`viewport-fit=cover` exige isso).
+- Botões do hero e da arquitetura ocupam a largura toda até 480px.
+
+**Padronização**
+- Raio de cards unificado em 16px (havia 14, 18 e 20). Botões primários com 56px de altura (havia 54, 56, 60 e 62). Grade de diferenciais com a mesma borda dos demais blocos.
+- Cards de docentes com a borda padrão do site (1px #E3E0D8, ouro no hover) no lugar de 2px petróleo.
+- Ouro sobre fundo claro (eyebrows, numerais, legenda de país, hovers) escurecido de #A88B4A para #856C33: contraste 4,5:1 sobre branco e marfim. O ouro #C6A664 sobre fundo escuro segue intacto.
+- Textos secundários do rodapé com mais contraste.
+
+**Conversão e percepção de valor**
+- Hero da home: célula "5 países no corpo docente" com as bandeiras (us, ca, gb, it, br) no lugar de "12 sessões de protocolo". O protocolo de 12 semanas segue no texto do hero e na arquitetura.
+- Preço e garantia nos cards "Investimento" de todas as páginas, no CTA final da home e na nota do hero.
+- `/investimento`: barra mobile vai direto ao checkout e acompanha o perfil escolhido (profissional/estudante); o CTA do menu leva ao card de preço.
+- Botões de checkout recuperaram o estado hover (havia dois atributos `class` no mesmo `<a>`; o segundo era ignorado).
+- Contagem regressiva: ao expirar, o relógio some e a faixa mostra "inscrições encerradas".
+
+**SEO · AEO · GEO**
+- Títulos descritivos por página; descrição da home cita a Turma de Fundadores.
+- `og:image` em 1200×630 via transformação Cloudinary (`c_pad`) em todas as páginas.
+- JSON-LD: nó `WebSite` em todas as páginas; `WebPage` com url, description e dateModified; `Course` com syllabusSections (9 módulos), educationalCredentialAwarded, coursePrerequisites, instructor e image; `/corpo-docente` com `ItemList` dos 31 docentes como `Person` (afiliação, país, foto); `/conteudo-programatico` com `ItemList` dos módulos; `FAQPage` de `/investimento` alinhada 1:1 com as 11 perguntas visíveis.
+- `sitemap.xml` com lastmod 2026-10-02; `llms.txt` com data de atualização.
+- `assets/cn.css?v=5` e `assets/cn.js?v=5`. O `vercel.json` serve `/assets` com cache imutável de 1 ano, então toda edição de CSS/JS exige incrementar o `?v=` nas 7 páginas.
+- `vercel.json` com Referrer-Policy, X-Frame-Options e Permissions-Policy.
+- Pasta legada `certificacao/` removida: conteúdo reprovado em auditoria e conflito com `/certificacao` sob `cleanUrls`.
+
+**Acessibilidade**
+- `<main id="conteudo">`: o link "Ir para o conteúdo" apontava para um alvo inexistente.
+- Burger com `aria-controls` e rótulo alternando abrir/fechar; Esc fecha o drawer.
+- Poppins 300 passou a ser carregada: o "COACH" do wordmark pede peso 300 e o Google Fonts só entregava 400.
+
+**Fotos oficiais**
+- Brunna Boaventura: `https://res.cloudinary.com/dlzrfhwin/image/upload/v1790952997/Brunna_Boaventura_ew5svu.jpg`
+- Brunno Falcão: `https://res.cloudinary.com/dlzrfhwin/image/upload/v1790964836/v2_feb93153-d52f-4fd5-a3bb-5074bfd678de_h9zvny.jpg`
+- Em todas as ocorrências (direção técnica e cards de docente), via recorte facial do Cloudinary (`c_thumb,g_face`).
+
+Fora do escopo desta rodada: `webinar/` e `obrigado/` (funil da aula aberta de 29/09, já realizada).
 
 ## Estrutura
 
