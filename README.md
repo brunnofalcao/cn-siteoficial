@@ -160,3 +160,30 @@ Não reintroduzir sem contrato assinado ou confirmação:
 - Total: 53 aulas gravadas, 60h. Somadas às 20h ao vivo, 80h
 - Corpo docente: 31 (10 internacionais, 21 Brasil), 5 países. Roberto Garcia (Mente em Forma) entrou no Pilar 6
 - Fotos dos docentes: Cloudinary, pasta "Coach Nutricional", com recorte facial automático (c_thumb,g_face) na URL
+
+## Central de conteúdo e ficha técnica (02/10/2026)
+
+- `/conteudo` (arquivo `conteudo/index.html`): central de perguntas e respostas para SEO, AEO e GEO. Link interno só no rodapé ("Central de conteúdo"), fora do menu e do drawer
+- Padrão editorial: um único H1 por página; cada pergunta é H2 com resposta direta nos primeiros 40 a 60 palavras; `FAQPage` no JSON-LD espelhando 1:1 as perguntas visíveis
+- Futuros artigos em `conteudo/<slug>.html`, servidos em `/conteudo/<slug>`. Usar sempre caminhos absolutos (`/assets/...`) nessas páginas
+- `/ficha-tecnica`: sem link no menu, no drawer, no rodapé nem no FAQ. Único link interno vem de `/conteudo`, para a página não ficar órfã para o Google. Traz as 4 perguntas de referência (Coach Nutricional, Science Play, Brunno Falcão, Brunna Boaventura) e as entidades `DefinedTerm`, `Organization` e `Person` no JSON-LD
+- Não duplicar `FAQPage` entre páginas: as perguntas de referência ficam como FAQ só em `/conteudo`; na ficha elas são entidades
+- `/sobre`: a dobra "Registros e contato" e "Uso de marcas de terceiros" foi removida. CNPJ visível não aparece mais no site; segue no JSON-LD
+
+## Regras editoriais do conteúdo (02/10/2026)
+
+- Todo conteúdo editorial do site (central /conteudo e artigos em /conteudo/<slug>) é assinado por **Coach Nutricional**, no texto e no JSON-LD (`author` e `publisher`)
+- Nenhum artigo é apresentado como derivado de aula nem cita professor da certificação como fonte. A certificação entra só como aprofundamento, no fechamento: "No Pilar X da Certificação COACH NUTRICIONAL®, ampliamos essa discussão."
+- Autores citados no corpo do texto são os das pesquisas referenciadas, sempre com autor e ano
+
+## Artigos da central (Onda 1 · publicados em 02/10/2026, em revisão)
+
+Oito artigos em `conteudo/<slug>.html`, listados na central /conteudo:
+
+coach-nutricional-precisa-ser-nutricionista · coach-nutricional-pode-prescrever-dieta · parar-ozempic-reganho-de-peso · por-que-o-paciente-nao-segue-a-dieta · comer-emocional · entrevista-motivacional-nutricao · quanto-cobrar-acompanhamento-nutricional · como-falar-sobre-peso-com-o-paciente
+
+- Estão no ar com `<meta name="robots" content="noindex, follow">`, aguardando a revisão técnica. Não entram no sitemap.xml nem no llms.txt enquanto estiverem em noindex
+- Ao aprovar um artigo: trocar o robots por `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`, incluir a URL no sitemap.xml e no llms.txt
+- Estrutura de cada artigo: H1 com a pergunta, assinatura "Por Coach Nutricional", bloco Resposta direta, Em resumo, subtítulos em H2, perguntas frequentes, referências, fechamento com o pilar da certificação e "Leia também"
+- JSON-LD: `Article` (author e publisher Coach Nutricional, citation com as referências), `FAQPage` só com as perguntas exclusivas do artigo e `BreadcrumbList`
+- Texto dos artigos alinhado à esquerda: justificado em coluna estreita abre buracos entre palavras no celular
