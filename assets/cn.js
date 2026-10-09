@@ -19,7 +19,27 @@
   function track(name, data){
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(Object.assign({ event:'cn_' + name }, data || {}));
+    /* espelha no GA4 como evento personalizado */
+    if(typeof window.gtag === 'function'){ try{ window.gtag('event', 'cn_' + name, data || {}); }catch(e){} }
   }
+
+  /* ─── Clique no checkout: InitiateCheckout (Meta) e begin_checkout (GA4) ─── */
+  var OFFERS = {
+    op5bstjb: { value:1297, name:'Certificação COACH NUTRICIONAL · Profissional de saúde', id:'cn-profissional' },
+    ntka92gh: { value:697,  name:'Certificação COACH NUTRICIONAL · Estudante',           id:'cn-estudante' }
+  };
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest && ev.target.closest('a[href*="pay.hotmart.com"]');
+    if(!a) return;
+    var m = a.href.match(/[?&]off=([a-z0-9]+)/i);
+    var o = OFFERS[m ? m[1] : ''] || OFFERS.op5bstjb;
+    if(typeof window.fbq === 'function'){
+      try{ window.fbq('track', 'InitiateCheckout', { value:o.value, currency:'BRL', content_name:o.name, content_ids:[o.id], content_type:'product', num_items:1 }); }catch(e){}
+    }
+    if(typeof window.gtag === 'function'){
+      try{ window.gtag('event', 'begin_checkout', { currency:'BRL', value:o.value, items:[{ item_id:o.id, item_name:o.name, price:o.value, quantity:1 }], transport_type:'beacon' }); }catch(e){}
+    }
+  }, true);
 
   function renderPrice(){
     var t = TIERS[tier];

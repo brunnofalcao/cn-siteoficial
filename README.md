@@ -33,7 +33,7 @@ Nada foi refeito. As 7 páginas, `cn.css` e `cn.js` foram refinados em cima da v
 - `og:image` em 1200×630 via transformação Cloudinary (`c_pad`) em todas as páginas.
 - JSON-LD: nó `WebSite` em todas as páginas; `WebPage` com url, description e dateModified; `Course` com syllabusSections (9 módulos), educationalCredentialAwarded, coursePrerequisites, instructor e image; `/corpo-docente` com `ItemList` dos 31 docentes como `Person` (afiliação, país, foto); `/conteudo-programatico` com `ItemList` dos módulos; `FAQPage` de `/investimento` alinhada 1:1 com as 11 perguntas visíveis.
 - `sitemap.xml` com lastmod 2026-10-02; `llms.txt` com data de atualização.
-- `assets/cn.css?v=5` e `assets/cn.js?v=5`. O `vercel.json` serve `/assets` com cache imutável de 1 ano, então toda edição de CSS/JS exige incrementar o `?v=` nas 7 páginas.
+- `assets/cn.css?v=6` e `assets/cn.js?v=6`. O `vercel.json` serve `/assets` com cache imutável de 1 ano, então toda edição de CSS/JS exige incrementar o `?v=` nas 7 páginas.
 - `vercel.json` com Referrer-Policy, X-Frame-Options e Permissions-Policy.
 - Pasta legada `certificacao/` removida: conteúdo reprovado em auditoria e conflito com `/certificacao` sob `cleanUrls`.
 
@@ -187,3 +187,11 @@ coach-nutricional-precisa-ser-nutricionista · coach-nutricional-pode-prescrever
 - Estrutura de cada artigo: H1 com a pergunta, assinatura "Por Coach Nutricional", bloco Resposta direta, Em resumo, subtítulos em H2, perguntas frequentes, referências, fechamento com o pilar da certificação e "Leia também"
 - JSON-LD: `Article` (author e publisher Coach Nutricional, citation com as referências), `FAQPage` só com as perguntas exclusivas do artigo e `BreadcrumbList`
 - Texto dos artigos alinhado à esquerda: justificado em coluna estreita abre buracos entre palavras no celular
+
+## Rastreamento (08/10/2026)
+
+- **GA4** `G-93JM8N0GRX` e **Pixel da Meta** `460696430970324` no `<head>` das 16 páginas do site, com o `<noscript>` do Pixel logo após o `<body>`. Em `webinar/` e `obrigado/` os IDs ficam no objeto `window.CN` (`metaPixelId`, `ga4Id`), que já carrega os scripts
+- Eventos Meta: `PageView` em todas · `ViewContent` em /certificacao e /investimento · `InitiateCheckout` no clique para a Hotmart, com valor (1297 ou 697), moeda BRL e perfil · `ViewContent` no webinar e `CompleteRegistration` no obrigado (já existiam)
+- Eventos GA4: `begin_checkout` no clique para a Hotmart, com valor e item · todos os eventos `cn_*` do dataLayer espelhados como eventos personalizados
+- A compra acontece no domínio da Hotmart: o evento `Purchase` precisa ser configurado nas ferramentas de rastreamento do produto na Hotmart, com o mesmo Pixel e o mesmo GA4
+- Assets em `?v=6`. Toda edição de `cn.css` ou `cn.js` exige subir a versão em todas as páginas
