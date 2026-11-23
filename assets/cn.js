@@ -2,15 +2,16 @@
   'use strict';
 
   /* ─── Tabela de preços ─── */
+  /* Black Week 23 a 30/11/2026 · cupom BLACKWEEK (40%) aplicado via offDiscount */
   var TIERS = {
-    pro: { anchor:'R$ 1.997', price:'134,14', cash:'R$ 1.297,00', bar:'12x R$ 134,14',
-           save:'Condição de Fundador: economize R$ 700',
-           terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Prazo de 12 meses para concluir a formação. Primeiro ano de membership incluso.',
-           url:'https://pay.hotmart.com/Q107343998H?off=op5bstjb' },
-    est: { anchor:'R$ 997', price:'72,09', cash:'R$ 697,00', bar:'12x R$ 72,09',
-           save:'Condição de Fundador: economize R$ 300',
-           terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Requer comprovação de matrícula em graduação da área da saúde. Prazo de 12 meses para concluir.',
-           url:'https://pay.hotmart.com/Q107343998H?off=ntka92gh' }
+    pro: { anchor:'R$ 1.997', price:'123,92', cash:'R$ 1.198,20', bar:'12x R$ 123,92',
+           save:'Black Week: 40% off, economize R$ 798,80',
+           terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Prazo de 12 meses para concluir a formação. Primeiro ano de membership incluso. Condição válida até 30/11/2026, 23h59.',
+           url:'https://pay.hotmart.com/Q107343998H?off=tlqjyupf&checkoutMode=10&bid=1795429768680&offDiscount=BLACKWEEK' },
+    est: { anchor:'R$ 997', price:'61,87', cash:'R$ 598,20', bar:'12x R$ 61,87',
+           save:'Black Week: 40% off, economize R$ 398,80',
+           terms:'* Parcelamento em até 12x no cartão, com juros da plataforma de pagamento. Requer comprovação de matrícula em graduação da área da saúde. Prazo de 12 meses para concluir. Condição válida até 30/11/2026, 23h59.',
+           url:'https://pay.hotmart.com/Q107343998H?off=ntka92gh&checkoutMode=10&offDiscount=BLACKWEEK' }
   };
   var tier = 'pro';
   function $(id){ return document.getElementById(id); }
@@ -25,19 +26,21 @@
 
   /* ─── Clique no checkout: InitiateCheckout (Meta) e begin_checkout (GA4) ─── */
   var OFFERS = {
-    op5bstjb: { value:1297, name:'Certificação COACH NUTRICIONAL · Profissional de saúde', id:'cn-profissional' },
-    ntka92gh: { value:697,  name:'Certificação COACH NUTRICIONAL · Estudante',           id:'cn-estudante' }
+    tlqjyupf: { value:1198.20, name:'Certificação COACH NUTRICIONAL · Profissional de saúde · Black Week', id:'cn-profissional' },
+    ntka92gh: { value:598.20,  name:'Certificação COACH NUTRICIONAL · Estudante · Black Week',           id:'cn-estudante' },
+    op5bstjb: { value:1297,    name:'Certificação COACH NUTRICIONAL · Profissional de saúde',             id:'cn-profissional' }
   };
   document.addEventListener('click', function(ev){
     var a = ev.target.closest && ev.target.closest('a[href*="pay.hotmart.com"]');
     if(!a) return;
     var m = a.href.match(/[?&]off=([a-z0-9]+)/i);
-    var o = OFFERS[m ? m[1] : ''] || OFFERS.op5bstjb;
+    var o = OFFERS[m ? m[1] : ''] || OFFERS.tlqjyupf;
+    var cp = a.href.match(/[?&]offDiscount=([a-z0-9]+)/i);
     if(typeof window.fbq === 'function'){
-      try{ window.fbq('track', 'InitiateCheckout', { value:o.value, currency:'BRL', content_name:o.name, content_ids:[o.id], content_type:'product', num_items:1 }); }catch(e){}
+      try{ window.fbq('track', 'InitiateCheckout', { value:o.value, currency:'BRL', content_name:o.name, content_ids:[o.id], content_type:'product', num_items:1, coupon:(cp ? cp[1] : '') }); }catch(e){}
     }
     if(typeof window.gtag === 'function'){
-      try{ window.gtag('event', 'begin_checkout', { currency:'BRL', value:o.value, items:[{ item_id:o.id, item_name:o.name, price:o.value, quantity:1 }], transport_type:'beacon' }); }catch(e){}
+      try{ window.gtag('event', 'begin_checkout', { currency:'BRL', value:o.value, coupon:(cp ? cp[1] : undefined), items:[{ item_id:o.id, item_name:o.name, price:o.value, quantity:1 }], transport_type:'beacon' }); }catch(e){}
     }
   }, true);
 
@@ -65,28 +68,26 @@
   });
   if(document.querySelector('[data-tier]')) renderPrice();
 
-  /* ─── Contagem regressiva ─── */
-  var DEADLINE = new Date('2026-10-19T23:59:59-03:00').getTime();
+  /* ─── Contagem regressiva · Black Week ─── */
+  var DEADLINE = new Date('2026-11-30T23:59:59-03:00').getTime();
+  var cds = document.querySelectorAll('[data-cd]');
   var timer = null;
   function tick(){
-    if(!$('cd')) return;
     var d = DEADLINE - Date.now();
     if(d <= 0){
       d = 0;
-      var ck = document.querySelector('.clock'), st = document.querySelector('.strip-t'), sl = document.querySelector('.strip-long');
-      if(ck) ck.style.display = 'none';
-      if(st) st.textContent = 'inscrições encerradas';
+      Array.prototype.forEach.call(document.querySelectorAll('.clock,.bw-clock,.bw-go'), function(el){ el.style.display = 'none'; });
+      var st = document.querySelector('.strip-t'), sl = document.querySelector('.strip-long');
+      if(st) st.textContent = 'Black Week encerrada';
       if(sl) sl.style.display = 'inline-flex';
       if(timer) clearInterval(timer);
     }
     var s = Math.floor(d / 1000);
     var pad = function(n){ return String(n).padStart(2,'0'); };
-    set('cd', pad(Math.floor(s / 86400)));
-    set('ch', pad(Math.floor(s % 86400 / 3600)));
-    set('cm', pad(Math.floor(s % 3600 / 60)));
-    set('cs', pad(s % 60));
+    var v = { d:pad(Math.floor(s / 86400)), h:pad(Math.floor(s % 86400 / 3600)), m:pad(Math.floor(s % 3600 / 60)), s:pad(s % 60) };
+    Array.prototype.forEach.call(cds, function(el){ el.textContent = v[el.getAttribute('data-cd')]; });
   }
-  if($('cd')){ tick(); timer = setInterval(tick, 1000); }
+  if(cds.length){ tick(); timer = setInterval(tick, 1000); }
 
   /* ─── Menu mobile ─── */
   var burger = $('burger'), drawer = $('drawer');

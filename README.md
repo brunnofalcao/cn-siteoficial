@@ -195,3 +195,12 @@ coach-nutricional-precisa-ser-nutricionista · coach-nutricional-pode-prescrever
 - Eventos GA4: `begin_checkout` no clique para a Hotmart, com valor e item · todos os eventos `cn_*` do dataLayer espelhados como eventos personalizados
 - A compra acontece no domínio da Hotmart: o evento `Purchase` precisa ser configurado nas ferramentas de rastreamento do produto na Hotmart, com o mesmo Pixel e o mesmo GA4
 - Assets em `?v=6`. Toda edição de `cn.css` ou `cn.js` exige subir a versão em todas as páginas
+
+
+## Black Week 2026 (v9 · 23 a 30/11/2026)
+- Barra fixa preta no topo (antes do menu) em todas as páginas, com contagem até 30/11/2026 23h59 (-03:00) e link para /investimento#black-week.
+- Seção `.bw#black-week` na home (logo após o hero) e na /investimento (antes do pitch de Fundadores); faixa `.bwb` antes do rodapé em certificacao, conteudo-programatico, corpo-docente e sobre.
+- Links Hotmart com cupom na URL (`offDiscount=BLACKWEEK`): profissional `off=tlqjyupf` (R$ 1.198,20 · 12x R$ 123,92), estudante `off=ntka92gh` (R$ 598,20 · 12x R$ 61,87).
+- Tracking: OFFERS no cn.js com os valores Black Week; InitiateCheckout e begin_checkout levam `coupon`. Eventos novos: cn_bw_topbar, cn_bw_band, cn_bw_checkout_pro, cn_bw_checkout_est.
+- Contagem usa `[data-cd="d|h|m|s"]` (vários relógios por página). Ao zerar, esconde relógios e troca a barra para "Black Week encerrada".
+- Em 01/12: reverter preços, links, textos, JSON-LD (priceValidUntil) e llms.txt para a condição pós Black Week, e subir `?v=`.

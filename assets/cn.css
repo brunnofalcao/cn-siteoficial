@@ -23,7 +23,7 @@ table{border-collapse:collapse}
 /* ───────── CABEÇALHO ───────── */
 .hd{position:fixed;top:0;left:0;right:0;z-index:900}
 .hd-spacer{height:104px}
-.strip{background:#061C1B;color:#C6A664;text-align:center;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;padding:0 16px;height:38px;display:flex;flex-wrap:nowrap;white-space:nowrap;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid rgba(198,166,100,.16)}
+.strip{background:#000;color:#fff;text-align:center;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;padding:0 16px;height:38px;display:flex;flex-wrap:nowrap;white-space:nowrap;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid rgba(198,166,100,.16)}
 .strip-b{color:#fff;font-weight:700}
 .strip-long{display:inline-flex;align-items:center;gap:10px}
 .strip-dot{opacity:.45}
@@ -235,3 +235,53 @@ p{text-wrap:pretty}
 @media (max-width:480px){ .cta-row>a{flex:1 1 100%} }
 @media (max-width:400px){ .strip{gap:6px;padding:0 10px} .clock span{padding:2px 4px} }
 @media (max-width:360px){ .logo-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important} }
+
+/* ───────── BLACK WEEK · 23 a 30/11/2026 ───────── */
+.strip{border-bottom:1px solid rgba(255,255,255,.14)}
+.bw-link{display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;width:100%;height:100%;white-space:nowrap}
+.bw-link:hover{color:#fff}
+.strip .strip-b{letter-spacing:.16em}
+.bw-off{background:#fff;color:#000;font-weight:800;border-radius:4px;padding:2px 7px;letter-spacing:.06em}
+.strip .clock{color:rgba(255,255,255,.7)}
+.strip .clock span{background:rgba(255,255,255,.14);color:#fff}
+.bw-go{border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:3px 11px;font-weight:700;transition:all .18s ease}
+.bw-link:hover .bw-go{background:#fff;color:#000}
+@media (max-width:420px){ .bw-go{display:none} .bw-off{padding:2px 5px} }
+
+.bw{background:#000;color:#fff;padding:clamp(56px,7vw,96px) 0;text-align:center;position:relative;overflow:hidden;border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c}
+.bw::before{content:"";position:absolute;inset:-40% -20% auto;height:90%;background:radial-gradient(ellipse at 50% 30%,rgba(198,166,100,.14),transparent 60%);pointer-events:none}
+.bw-in{max-width:1000px;margin:0 auto;padding:0 24px;position:relative}
+.bw-tag{display:inline-block;background:#fff;color:#000;font-family:'Poppins',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:9px 18px;border-radius:40px;margin-bottom:24px}
+.bw h2{font-size:clamp(28px,4.6vw,50px);font-weight:800;color:#fff;line-height:1.1;max-width:22ch;margin:0 auto 20px}
+.bw h2 span{color:#C6A664}
+.bw-lead{font-size:clamp(15.5px,1.6vw,18px);color:rgba(255,255,255,.78);line-height:1.72;max-width:62ch;margin:0 auto 32px}
+.bw-clock{display:inline-grid;grid-template-columns:repeat(4,minmax(64px,1fr));gap:10px;margin-bottom:40px}
+.bw-clock div{background:#111;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 10px 10px}
+.bw-clock b{display:block;font-family:'Poppins',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.bw-clock span{display:block;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:6px}
+.bw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px;text-align:left;max-width:860px;margin:0 auto}
+.bw-card{background:#0d0d0d;border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column}
+.bw-card-hl{border-color:#C6A664;box-shadow:0 0 0 1px rgba(198,166,100,.35),0 18px 48px rgba(198,166,100,.12)}
+.bw-card-h b{display:block;font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:#fff}
+.bw-card-h small{display:block;font-size:12.5px;color:rgba(255,255,255,.55);margin-top:2px}
+.bw-anc{font-size:14px;color:rgba(255,255,255,.6);margin:20px 0 6px}
+.bw-anc s{color:rgba(255,255,255,.6)}
+.bw-price{display:flex;align-items:flex-end;gap:5px;font-family:'Poppins',sans-serif;line-height:1;color:#fff}
+.bw-price em{font-style:normal;font-size:18px;font-weight:700;color:#C6A664;padding-bottom:6px}
+.bw-price sup{font-size:18px;font-weight:700;padding-bottom:20px}
+.bw-price span{font-size:clamp(44px,5.6vw,58px);font-weight:800;letter-spacing:-.03em}
+.bw-price i{font-style:normal;font-size:18px;color:#C6A664;padding-bottom:22px}
+.bw-cash{font-size:15px;color:rgba(255,255,255,.78);margin:10px 0 16px}
+.bw-cash b{color:#fff}
+.bw-save{align-self:flex-start;background:rgba(255,255,255,.1);color:#fff;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;border-radius:999px;padding:7px 14px;margin-bottom:22px}
+.bw-cta{display:flex;align-items:center;justify-content:center;background:#fff;color:#000;font-family:'Poppins',sans-serif;font-weight:800;font-size:15.5px;padding:17px 24px;border-radius:8px;min-height:56px;margin-top:auto;transition:all .18s ease;text-align:center}
+.bw-cta:hover{background:#C6A664;color:#000;transform:translateY(-1px)}
+.bw-trust{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:28px 0 18px}
+.bw-trust li{font-size:12px;font-weight:600;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 14px}
+.bw-terms{font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.6;max-width:76ch;margin:0 auto}
+.bwb{background:#000;color:#fff;padding:clamp(36px,4.5vw,52px) 0;border-top:1px solid #1c1c1c}
+.bwb-in{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.bwb-tag{display:inline-block;background:#fff;color:#000;font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:7px 14px;border-radius:40px;margin-bottom:12px}
+.bwb-t{font-family:'Poppins',sans-serif;font-size:clamp(17px,2vw,21px);font-weight:600;line-height:1.4;max-width:46ch}
+.bwb .bw-cta{flex:0 0 auto;margin-top:0}
+@media (max-width:640px){ .bw-clock{grid-template-columns:repeat(4,1fr);width:100%} .bwb .bw-cta{width:100%} }
