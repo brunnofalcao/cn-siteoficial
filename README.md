@@ -203,4 +203,5 @@ coach-nutricional-precisa-ser-nutricionista · coach-nutricional-pode-prescrever
 - Links Hotmart com cupom na URL (`offDiscount=BLACKWEEK`): profissional `off=tlqjyupf` (R$ 1.198,20 · 12x R$ 123,92), estudante `off=ntka92gh` (R$ 598,20 · 12x R$ 61,87).
 - Tracking: OFFERS no cn.js com os valores Black Week; InitiateCheckout e begin_checkout levam `coupon`. Eventos novos: cn_bw_topbar, cn_bw_band, cn_bw_checkout_pro, cn_bw_checkout_est.
 - Contagem usa `[data-cd="d|h|m|s"]` (vários relógios por página). Ao zerar, esconde relógios e troca a barra para "Black Week encerrada".
-- Em 01/12: reverter preços, links, textos, JSON-LD (priceValidUntil) e llms.txt para a condição pós Black Week, e subir `?v=`.
+- Em 01/12: reverter preços, links, textos, JSON-LD (priceValidUntil) e llms.txt para a condição pós Black Week, e subir `?v=` (hoje em v=8).
+- Página pós-compra: `/boas-vindas` (noindex). CTA principal para o grupo de WhatsApp dos Fundadores. Configurar na Hotmart como página de obrigado das ofertas `tlqjyupf` e `ntka92gh`. Não dispara Purchase (fica com o pixel da Hotmart); registra `cn_boas_vindas_view` e `cn_grupo_fundadores`.

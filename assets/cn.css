@@ -285,3 +285,12 @@ p{text-wrap:pretty}
 .bwb-t{font-family:'Poppins',sans-serif;font-size:clamp(17px,2vw,21px);font-weight:600;line-height:1.4;max-width:46ch}
 .bwb .bw-cta{flex:0 0 auto;margin-top:0}
 @media (max-width:640px){ .bw-clock{grid-template-columns:repeat(4,1fr);width:100%} .bwb .bw-cta{width:100%} }
+
+/* carrinho da /investimento em modo Black Week */
+.inv-bw-top{display:flex;align-items:center;flex-wrap:wrap;gap:10px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;padding-bottom:20px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.14)}
+.inv-bw-top .strip-b{letter-spacing:.16em;color:#fff}
+.inv-bw-end{color:rgba(255,255,255,.6);font-weight:500;margin-left:auto}
+.inv-bw .tierbtn{background:#111;border-color:rgba(255,255,255,.18)}
+.inv-bw .tierbtn:hover{border-color:#fff;color:#fff}
+.inv-bw .tierbtn.on{background:#fff;color:#000;border-color:#fff}
+.inv-bw #price{color:#fff}
